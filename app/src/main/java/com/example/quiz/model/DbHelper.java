@@ -51,15 +51,15 @@ public class DbHelper extends SQLiteOpenHelper {
     // update will be done by increasing database version by 1
 
     private void fillQuestions(){
-        Question ques1 = new Question("Question1", "op1", "op2", "op3", "op4", "op1");
+        Question ques1 = new Question("Which months have 28 days?", "February", "March", "None", "All of the months", "All of the months");
         addQuestion(ques1);  // passing the question to add question method
-        Question ques2 = new Question("Question2", "op21", "op22", "op23", "op24", "op22");
+        Question ques2 = new Question("How many 0.5cm slices of bread can you cut from a whole bread that's 25cm long? ", "1", "25", "39", "None of above", "1");
         addQuestion(ques2);
-        Question ques3 = new Question("Question3", "op31", "op32", "op33", "op34", "op33");
+        Question ques3 = new Question("If a leaf falls to the ground in a forest and no one hears it, does it make a sound? ", "Yes", "No", "Depends upon how heavy the leaf was", "Depends on where it landed", "Yes");
         addQuestion(ques3);
-        Question ques4 = new Question("Question4", "op41", "op42", "op43", "op44", "op44");
+        Question ques4 = new Question("The answer is really big. ", "Really Big", "An elephant", "THE ANSWER", "The data given is insufficient", "THE ANSWER");
         addQuestion(ques4);
-        Question ques5 = new Question("Question5", "op51", "op52", "op53", "op54", "op51");
+        Question ques5 = new Question("There are 45 apples in your basket. You take three apples out of the basket. How many apples are left?", "3", "42", "45", "I don't like apples", "45");
         addQuestion(ques5);
 
     }

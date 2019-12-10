@@ -3,6 +3,7 @@ package com.example.quiz;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -35,6 +36,8 @@ public class game extends AppCompatActivity {
     private Question currentQues;
 
     private ColorStateList defaultTextColor;
+    private ColorStateList defaultBackground;
+
     private int score = 0;
     private int count = 0;
     private boolean answeredQues;
@@ -68,6 +71,7 @@ public class game extends AppCompatActivity {
         btnNextQuestion = findViewById(R.id.btnNext);
 
         defaultTextColor = btn1.getHintTextColors();
+//        btn1.setBackground(getDrawable(R.drawable.corner));
 
         DbHelper dbHelper = new DbHelper(this);
         questionList = dbHelper.retriveQuestions();
@@ -101,11 +105,16 @@ public class game extends AppCompatActivity {
 
     private void displayNextQues() {
         btn1.setTextColor(defaultTextColor);
+        btn1.setBackground(getDrawable(R.drawable.corner));
         btn2.setTextColor(defaultTextColor);
+        btn2.setBackground(getDrawable(R.drawable.corner));
         btn3.setTextColor(defaultTextColor);
+        btn3.setBackground(getDrawable(R.drawable.corner));
         btn4.setTextColor(defaultTextColor);
+        btn4.setBackground(getDrawable(R.drawable.corner));
 
-       if(questionCounter < totalQuestionCounter){  // checking if the question is available or not
+
+        if(questionCounter < totalQuestionCounter){  // checking if the question is available or not
            currentQues = questionList.get(questionCounter);
 
            tvQuestion.setText(currentQues.getQues());
@@ -120,7 +129,11 @@ public class game extends AppCompatActivity {
            tvQuesCount.setText(+ questionCounter + "/" + totalQuestionCounter);
            answeredQues = false;
        }else {
-           finishGame();
+//           finishGame();
+            Intent intendPoint = new Intent(game.this, ScoreScreen.class);
+            intendPoint.putExtra("score",tvScore.getText().toString());
+            startActivity(intendPoint);
+
        }
     }
 
@@ -162,14 +175,16 @@ public class game extends AppCompatActivity {
 
         if(selectedAnswer.getText().toString().equals(correctAns)){
             Toast.makeText(this, "correct Answer", Toast.LENGTH_LONG).show();
-            selectedAnswer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#388e3c")));
-            selectedAnswer.setTextColor(ColorStateList.valueOf(Color.parseColor("#ffffff")));
+//            selectedAnswer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#388e3c")));
+            selectedAnswer.setBackground(getDrawable(R.drawable.corner_green));
+            selectedAnswer.setTextColor(ColorStateList.valueOf(Color.parseColor("#388e3c")));
             score++;
             tvScore.setText("" + score);
         }
         else{
-            selectedAnswer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#d32f2f")));
-            selectedAnswer.setTextColor(ColorStateList.valueOf(Color.parseColor("#ffffff")));
+//            selectedAnswer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#d32f2f")));
+            selectedAnswer.setBackground(getDrawable(R.drawable.corner_red));
+            selectedAnswer.setTextColor(ColorStateList.valueOf(Color.parseColor("#d32f2f")));
             Toast.makeText(this, "wrong Answer", Toast.LENGTH_LONG).show();
         }
 

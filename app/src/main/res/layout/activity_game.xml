@@ -44,7 +44,7 @@
             android:id="@+id/tvScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100"
+            android:text="0"
             android:layout_marginRight="25dp"
             android:textColor="#388e3c"
             android:textSize="20sp"
@@ -54,9 +54,10 @@
 
     <LinearLayout
         android:layout_marginTop="90dp"
-        android:layout_width="290dp"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:padding="20dp"
         android:layout_marginBottom="50dp"
         >
         <TextView
@@ -85,6 +86,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/corner"
             android:text="Option 1"
+            android:textAllCaps="false"
             android:elevation="1dp"
             android:layout_marginBottom="15dp"/>
         <Button
@@ -93,6 +95,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/corner"
             android:text="Option 2"
+            android:textAllCaps="false"
             android:elevation="1dp"
             android:layout_marginBottom="15dp"/>
         <Button
@@ -101,6 +104,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/corner"
             android:text="Option 3"
+            android:textAllCaps="false"
             android:elevation="1dp"
             android:layout_marginBottom="15dp"/>
         <Button
@@ -109,6 +113,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/corner"
             android:text="Option 4"
+            android:textAllCaps="false"
             android:elevation="1dp"/>
     </LinearLayout>
 
