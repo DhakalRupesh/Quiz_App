@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game"
+    android:background="@drawable/appbg"
+    android:orientation="vertical"
+    android:padding="14dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:id="@+id/qCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            tools:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Score : "
+            android:textColor="#388e3c"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            tools:visibility="visible"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:layout_marginRight="25dp"
+            android:textColor="#388e3c"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="90dp"
+        android:layout_width="290dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        >
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guess the name of Mountain"
+            android:textSize="25sp"
+            android:lineSpacingExtra="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#21BDBD"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnOp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:text="Option 1"
+            android:elevation="1dp"
+            android:layout_marginBottom="15dp"/>
+        <Button
+            android:id="@+id/btnOp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:text="Option 2"
+            android:elevation="1dp"
+            android:layout_marginBottom="15dp"/>
+        <Button
+            android:id="@+id/btnOp3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:text="Option 3"
+            android:elevation="1dp"
+            android:layout_marginBottom="15dp"/>
+        <Button
+            android:id="@+id/btnOp4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:text="Option 4"
+            android:elevation="1dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cornernext"
+        android:text="Next"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:elevation="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
